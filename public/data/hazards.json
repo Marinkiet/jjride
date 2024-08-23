@@ -1,0 +1,108 @@
+[
+    {
+      "id": 1,
+      "description": "Loose railing on the stairs at LaborAssist Construction Site.",
+      "status": "Pending",
+      "companyName": "LaborAssist",
+      "location": "Germiston"
+    },
+    {
+      "id": 2,
+      "description": "Exposed wires in the workshop area at SafetyCo Site.",
+      "status": "Working on it",
+      "companyName": "SafetyCo",
+      "location": "Benoni"
+    },
+    {
+      "id": 3,
+      "description": "Ladder with missing steps at RoadWorks Construction Site.",
+      "status": "Pending",
+      "companyName": "RoadWorks",
+      "location": "Sandton"
+    },
+    {
+      "id": 4,
+      "description": "Wet floor in the kitchen area at SuperSite Office.",
+      "status": "Working on it",
+      "companyName": "SuperSite",
+      "location": "Roodepoort"
+    },
+    {
+      "id": 5,
+      "description": "Poor ventilation leading to respiratory hazards at DigRight Construction Site.",
+      "status": "Pending",
+      "companyName": "DigRight",
+      "location": "Brakpan"
+    },
+    {
+      "id": 6,
+      "description": "Fire exit blocked by stored materials at BuildPro Office.",
+      "status": "Working on it",
+      "companyName": "BuildPro",
+      "location": "Middelburg"
+    },
+    {
+      "id": 7,
+      "description": "Exposed and broken electrical panel at ExcavateCo Site.",
+      "status": "Pending",
+      "companyName": "ExcavateCo",
+      "location": "Emalahleni"
+    },
+    {
+      "id": 8,
+      "description": "Unsafe equipment use at MixMasters Construction Site.",
+      "status": "Pending",
+      "companyName": "MixMasters",
+      "location": "Pietermaritzburg"
+    },
+    {
+      "id": 9,
+      "description": "Unsecured scaffolding at TileExperts Construction Site.",
+      "status": "Working on it",
+      "companyName": "TileExperts",
+      "location": "Nelspruit"
+    },
+    {
+      "id": 10,
+      "description": "Improperly stored materials at RoofRight Site.",
+      "status": "Pending",
+      "companyName": "RoofRight",
+      "location": "Klerksdorp"
+    },
+    {
+      "id": 11,
+      "description": "Obstructed emergency exits at MaintainPro Office.",
+      "status": "Working on it",
+      "companyName": "MaintainPro",
+      "location": "Uthungulu"
+    },
+    {
+      "id": 12,
+      "description": "Unattended hazardous materials at MachineryCo Site.",
+      "status": "Pending",
+      "companyName": "MachineryCo",
+      "location": "Richards Bay"
+    },
+    {
+      "id": 13,
+      "description": "Warning tape gone around live cables",
+      "status": "Pending",
+      "companyName": "BrickMasters",
+      "location": "Cape Town"
+    },
+    {
+        "id": 14,
+        "description": "Falling debrie on street from 3rd floor",
+        "status": "Pending",
+        "companyName": "MachineryCo",
+        "location": "Richards Bay"
+      },
+      {
+        "id": 15,
+        "description": "Toxic paint smell",
+        "status": "Working on it",
+        "companyName": "BrickMasters",
+        "location": "Cape Town"
+      }
+  ]
+  

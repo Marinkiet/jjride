@@ -1,0 +1,5 @@
+[
+    { "title": "Construction Worker", "company": "BuildWell Construction", "contractor": "Sipho Mokoena", "location": "Johannesburg", "duration": "2 weeks", "status": "Pending" },
+    { "title": "Warehouse Laborer", "company": "LogiFast Logistics", "trainer": "Miriam Nkosi", "location": "Cape Town", "duration": "1 month", "status": "Approved" }
+  ]
+  

@@ -1,0 +1,22 @@
+[
+    { "value": "cape_town", "label": "Cape Town" },
+    { "value": "johannesburg", "label": "Johannesburg" },
+    { "value": "durban", "label": "Durban" },
+    { "value": "pretoria", "label": "Pretoria" },
+    { "value": "port_elizabeth", "label": "Port Elizabeth" },
+    { "value": "east_london", "label": "East London" },
+    { "value": "bloemfontein", "label": "Bloemfontein" },
+    { "value": "stellenbosch", "label": "Stellenbosch" },
+    { "value": "germiston", "label": "Germiston" },
+    { "value": "benoni", "label": "Benoni" },
+    { "value": "sandton", "label": "Sandton" },
+    { "value": "roodepoort", "label": "Roodepoort" },
+    { "value": "brakpan", "label": "Brakpan" },
+    { "value": "middelburg", "label": "Middelburg" },
+    { "value": "emalahleni", "label": "Emalahleni" },
+    { "value": "pietermaritzburg", "label": "Pietermaritzburg" },
+    { "value": "nelspruit", "label": "Nelspruit" },
+    { "value": "klerksdorp", "label": "Klerksdorp" },
+    { "value": "uthungulu", "label": "Uthungulu" },
+    { "value": "richards_bay", "label": "Richards Bay" }
+]

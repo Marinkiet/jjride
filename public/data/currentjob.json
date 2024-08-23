@@ -1,0 +1,16 @@
+[
+    {
+      "jobId": "1",
+      "title": "Construction Laborer",
+      "companyName": "BuildIt Inc.",
+      "safetyRating": 4.5,
+      "payRate": 20,
+      "duration": "3 months",
+      "city": "cape_town",
+      "description": "Assist with various construction tasks.",
+      "equipmentProvided": ["Helmet", "Gloves"],
+      "laborRights": "Standard construction labor rights.",
+      "street": "123 Builder St."
+    }
+  
+  ]
