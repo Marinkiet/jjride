@@ -1,7 +1,7 @@
 "use client"; // Ensure this is a client component
 
 import Link from 'next/link';
-import AIChatButton from '@/components/AIChatButton';
+import AIChatButton from './components/UI/AIChatButton';
 import { AiOutlineMessage } from 'react-icons/ai'; // Bot icon
 
 export default function Home() {
