@@ -121,7 +121,7 @@ export default function Home() {
 
               {/* <h3 className="text-xl font-bold mb-2">Your Next Opportunity Awaits</h3> */}
               <p className="text-sm mb-4 text-white">
-              Encountered an incident on the job? Don’t stay silent. Report any workplace incidents directly to your employer through our app. Whether it's an injury, equipment failure, or unsafe practices, your report ensures that necessary actions are taken to prevent future occurrences. Your voice helps create a safer, more accountable workplace for everyone.
+              Encountered an incident on the job? Dooes not stay silent. Report any workplace incidents directly to your employer through our app. Whether it is an injury, equipment failure, or unsafe practices, your report ensures that necessary actions are taken to prevent future occurrences. Your voice helps create a safer, more accountable workplace for everyone.
               </p>
               <Link href="/reportIncident" className="inline-block bg-pink-700 text-white px-6 py-3 rounded-full shadow-md hover:bg-pink-400">
                 Report Incident
