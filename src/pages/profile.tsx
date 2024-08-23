@@ -95,7 +95,7 @@ const Profile = () => {
             <h1 className="text-2xl md:text-3xl font-bold mb-2">Your Profile</h1>
             <p className="text-sm md:text-lg mb-4">Review your job applications and reports.</p>
           </div>
-          <img src="/assets/work.jpg" alt="Profile" className="w-40 h-40 mr-10 rounded-full object-cover" />
+          <img src="/assets/jim.jpg" alt="Profile" className="w-40 h-40 mr-10 rounded-full object-cover" />
         </div>
       </section>
 

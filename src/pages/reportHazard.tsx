@@ -129,7 +129,7 @@ const ReportHazard = () => {
 
       <section
         className="relative h-[35vh] bg-cover bg-center rounded-tl-[120px] rounded-tr-[0px] rounded-br-[120px] rounded-bl-[0px] overflow-hidden"
-        style={{ backgroundImage: "url('/assets/work.jpg')" }}
+        style={{ backgroundImage: "url('/assets/olly.jpg')" }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center p-4">

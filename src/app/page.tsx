@@ -41,7 +41,7 @@ export default function Home() {
             <div className="w-full rounded-lg shadow-lg p-5 flex flex-col items-center text-center md:text-left">
             <h2 className="text-3xl font-bold mb-8 text-center md:text-center">Your Next Opportunity Awaits
             <img
-              src="/assets/descnt.png" 
+              src="/assets/goal.png" 
               alt="Featured Job"
               className="max-w-md  h-auto rounded-lg p-10"
             />
@@ -79,7 +79,7 @@ export default function Home() {
 
 
             <img
-              src="/assets/safty.png" 
+              src="/assets/stop.png" 
               alt="Featured Job"
               className="max-w-md h-auto rounded-lg p-10"
             />
