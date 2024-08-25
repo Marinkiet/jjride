@@ -87,7 +87,7 @@ export default function Home() {
 
               {/* <h3 className="text-xl font-bold mb-2">Your Next Opportunity Awaits</h3> */}
               <p className="text-sm mb-4">
-              Your safety is our priority. If you spot any hazards or unsafe conditions at a worksite, report them instantly through the app. Each report is sent directly to the company, helping to hold them accountable for safety standards. The more reports a company receives, the more their safety rating reflects their attention to workplace safety, encouraging safer environments for everyone.              </p>
+              Your safety is our priority. If you spot any hazards or unsafe conditions at a worksite, report them instantly through the app. Each report is sent directly to the company, helping to hold them accountable for safety standards. The more reports a company receives, the more their safety rating reflects their attention to workplace safety, encouraging safer environments for everyone.</p>
               <Link href="/reportHazard" className="inline-block bg-pink-700 text-white px-6 py-3 rounded-full shadow-md hover:bg-pink-400">
                 Report Harzard
               </Link>

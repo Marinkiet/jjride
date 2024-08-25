@@ -136,7 +136,7 @@ const Apply = () => {
             <span className="text-xs">Profile</span>
           </Link>
         </nav>
-        <button onClick={() => signOut()}>Logout</button>
+        {/* <button onClick={() => signOut()}>Logout</button> */}
       </header>
       <section
         className="relative h-[35vh] bg-cover bg-center rounded-tl-[120px] rounded-tr-[0px] rounded-br-[120px] rounded-bl-[0px] overflow-hidden"
