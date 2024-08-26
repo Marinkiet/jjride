@@ -49,7 +49,7 @@ export default function Home() {
 
               {/* <h3 className="text-xl font-bold mb-2">Your Next Opportunity Awaits</h3> */}
               <p className="text-sm mb-4">
-                Explore a curated list of job opportunities in your area that align with your unique skills and experience. Whether you are looking for short-term gigs or long-term roles, find the perfect match close to home, and start your next career move today.
+                Explore a curated list of job opportunities in your area that align with your unique skills and experience. Whether you are looking for short-term gigs or long term roles, find the perfect match close to home, and start your next career move today.
               </p>
               <Link href="/apply" className="inline-block bg-pink-700 text-white px-6 py-3 rounded-full shadow-md hover:bg-pink-400">
                 Apply Now
