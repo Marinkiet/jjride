@@ -113,7 +113,7 @@ export default function Home() {
               <h2 className="text-3xl text-white font-bold mb-8 text-center md:text-center">
                 Speak Up: Report Workplace Incidents
                 <img
-                  src="/assets/olly.jpg" 
+                  src="/assets/all.png" 
                   alt="Featured Job"
                   className="max-w-md h-auto rounded-lg p-10"
                 />
