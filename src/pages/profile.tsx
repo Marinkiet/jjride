@@ -1,9 +1,31 @@
-'use client';
+import { AiOutlineHome, AiOutlineForm, AiOutlineExclamationCircle, AiOutlineWarning, AiOutlineUser, AiOutlineClockCircle, AiOutlineCheckCircle } from 'react-icons/ai'; 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import '../../src/app/globals.css';
-import { AiOutlineHome, AiOutlineForm, AiOutlineExclamationCircle, AiOutlineWarning, AiOutlineUser } from 'react-icons/ai'; 
-import { useState, useEffect } from 'react';
-import { AiOutlineClockCircle, AiOutlineCheckCircle } from 'react-icons/ai';
+
+interface Hazard {
+  title: string;
+  company: string;
+  location: string;
+  details: string;
+  status: string;
+}
+
+interface JobApplication {
+  title: string;
+  company: string;
+  location: string;
+  duration: string;
+  status: string;
+}
+
+interface Incident {
+  title: string;
+  company: string;
+  location: string;
+  details: string;
+  status: string;
+}
 
 const Profile = () => {
   const [username, setUsername] = useState('John Doe');
@@ -11,25 +33,23 @@ const Profile = () => {
   const [city, setCity] = useState('Benoni'); 
   const [phone, setPhone] = useState('0789989876'); 
   const [isEditing, setIsEditing] = useState(false);
-  const [jobApplications, setJobApplications] = useState([]);
-  const [hazards, setHazards] = useState([]);
-  const [incidents, setIncidents] = useState([]);
+  const [jobApplications, setJobApplications] = useState<JobApplication[]>([]);
+  const [hazards, setHazards] = useState<Hazard[]>([]);
+  const [incidents, setIncidents] = useState<Incident[]>([]);
 
   useEffect(() => {
-    // Fetch data from JSON files
     const fetchData = async () => {
       const jobResponse = await fetch('/data/jobApplications.json');
-      const jobData = await jobResponse.json();
+      const jobData: JobApplication[] = await jobResponse.json();
       setJobApplications(jobData);
 
       const hazardResponse = await fetch('/data/hazards.json');
-      const hazardData = await hazardResponse.json();
-      // Filter hazards based on the user's city
-      const filteredHazards = hazardData.filter(hazard => hazard.location === city);
+      const hazardData: Hazard[] = await hazardResponse.json();
+      const filteredHazards = hazardData.filter((hazard: Hazard) => hazard.location === city);
       setHazards(filteredHazards);
 
       const incidentResponse = await fetch('/data/incidents.json');
-      const incidentData = await incidentResponse.json();
+      const incidentData: Incident[] = await incidentResponse.json();
       setIncidents(incidentData);
     };
 
@@ -38,7 +58,19 @@ const Profile = () => {
 
   const handleSave = () => {
     setIsEditing(false);
-    // Here, you would typically send the updated information to your backend server.
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'pending':
+        return 'text-yellow-500';
+      case 'worked on':
+        return 'text-green-500';
+      case 'resolved':
+        return 'text-green-500';
+      default:
+        return 'text-gray-800';
+    }
   };
 
   return (
@@ -61,7 +93,6 @@ const Profile = () => {
             <AiOutlineUser className="mr-2" /> Profile
           </Link>
         </nav>
-        {/* Mobile menu */}
         <nav className="md:hidden fixed bottom-0 left-0 w-full bg-pink-900 text-white flex justify-around py-2 shadow-lg">
           <Link href="/" className="flex flex-col items-center">
             <AiOutlineHome size={24} />
@@ -86,7 +117,6 @@ const Profile = () => {
         </nav>
       </header>
 
-      {/* Banner Section */}
       <section className="relative h-[35vh] bg-cover bg-center rounded-tl-[120px] rounded-tr-[0px] rounded-br-[120px] rounded-bl-[0px] overflow-hidden" 
         style={{ backgroundImage: "url('/assets/law.jpg')" }}>
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -100,7 +130,6 @@ const Profile = () => {
       </section>
 
       <main className="mt-8">
-        {/* Personal Details Section */}
         <div className="mx-auto px-6 mb-8">
           <h3 className="text-xl font-bold">Personal Information</h3>
           <hr className="my-4" />
@@ -131,11 +160,11 @@ const Profile = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+                <label className="block text-gray-700 font-bold mb-2" htmlFor="phone">
                   Phone
                 </label>
                 <input
-                  type="string"
+                  type="text"
                   id="phone"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
@@ -177,7 +206,6 @@ const Profile = () => {
           )}
         </div>
 
-        {/* Job Applications Section */}
         <div className="mx-auto p-6 mb-8">
           <h3 className="text-xl font-bold mb-4">My Job Applications</h3>
           <hr className="my-4" />
@@ -190,20 +218,18 @@ const Profile = () => {
                   <p className="text-gray-600">Location: {job.location}</p>
                   <p className="text-gray-600">Duration: {job.duration}</p>
                 </div>
-                <div className="flex items-center mt-4">
-                  {job.status === 'Pending' && <AiOutlineClockCircle className="text-orange-500 mr-2" size={24} />}
-                  {job.status === 'Approved' && <AiOutlineCheckCircle className="text-green-500 mr-2" size={24} />}
-                  {job.status === 'Rejected' && <AiOutlineWarning className="text-red-500 mr-2" size={24} />}
-                  <span className={`font-bold ${job.status === 'Pending' ? 'text-orange-500' : job.status === 'Approved' ? 'text-green-500' : 'text-red-500'}`}>{job.status}</span>
+                <div className="mt-4 flex items-center">
+                  {job.status === 'pending' && <AiOutlineClockCircle size={20} className="text-yellow-500 mr-2" />}
+                  {job.status === 'worked on' && <AiOutlineCheckCircle size={20} className="text-green-500 mr-2" />}
+                  <span className={getStatusColor(job.status)}>{job.status}</span>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Hazards Section */}
         <div className="mx-auto p-6 mb-8">
-          <h3 className="text-xl font-bold mb-4">My Reported Hazards</h3>
+          <h3 className="text-xl font-bold mb-4">Reported Hazards</h3>
           <hr className="my-4" />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {hazards.map((hazard, index) => (
@@ -214,19 +240,18 @@ const Profile = () => {
                   <p className="text-gray-600">Location: {hazard.location}</p>
                   <p className="text-gray-600">Details: {hazard.details}</p>
                 </div>
-                <div className="flex items-center mt-4">
-                  {hazard.status === 'Pending' && <AiOutlineClockCircle className="text-orange-500 mr-2" size={24} />}
-                  {hazard.status === 'Resolved' && <AiOutlineCheckCircle className="text-green-500 mr-2" size={24} />}
-                  <span className={`font-bold ${hazard.status === 'Pending' ? 'text-orange-500' : 'text-green-500'}`}>{hazard.status}</span>
+                <div className="mt-4 flex items-center">
+                  {hazard.status === 'pending' && <AiOutlineClockCircle size={20} className="text-yellow-500 mr-2" />}
+                  {hazard.status === 'resolved' && <AiOutlineCheckCircle size={20} className="text-green-500 mr-2" />}
+                  <span className={getStatusColor(hazard.status)}>{hazard.status}</span>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Incidents Section */}
         <div className="mx-auto p-6 mb-8">
-          <h3 className="text-xl font-bold mb-4">My Reported Incidents</h3>
+          <h3 className="text-xl font-bold mb-4">Reported Incidents</h3>
           <hr className="my-4" />
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {incidents.map((incident, index) => (
@@ -237,10 +262,10 @@ const Profile = () => {
                   <p className="text-gray-600">Location: {incident.location}</p>
                   <p className="text-gray-600">Details: {incident.details}</p>
                 </div>
-                <div className="flex items-center mt-4">
-                  {incident.status === 'Pending' && <AiOutlineClockCircle className="text-orange-500 mr-2" size={24} />}
-                  {incident.status === 'Resolved' && <AiOutlineCheckCircle className="text-green-500 mr-2" size={24} />}
-                  <span className={`font-bold ${incident.status === 'Pending' ? 'text-orange-500' : 'text-green-500'}`}>{incident.status}</span>
+                <div className="mt-4 flex items-center">
+                  {incident.status === 'pending' && <AiOutlineClockCircle size={20} className="text-yellow-500 mr-2" />}
+                  {incident.status === 'resolved' && <AiOutlineCheckCircle size={20} className="text-green-500 mr-2" />}
+                  <span className={getStatusColor(incident.status)}>{incident.status}</span>
                 </div>
               </div>
             ))}
