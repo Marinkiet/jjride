@@ -171,7 +171,7 @@ const Apply = () => {
               <h2 className="text-xl font-semibold">{job.title}</h2>
               <p className="text-gray-600">Company: {job.companyName}</p>
               <p className="text-gray-600">City: {job.city}</p>
-              <p className="text-gray-600">Pay Rate: ${job.payRate} / day</p>
+              <p className="text-gray-600">Pay Rate: R{job.payRate} / day</p>
               <p className="text-gray-600">Duration: {job.duration}</p>
               <p className="text-gray-600">Description: {job.description}</p>
               <p className="text-gray-600">Equipment Provided: {job.equipmentProvided.join(', ')}</p>
